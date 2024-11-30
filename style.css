@@ -425,12 +425,18 @@ nav {
   margin-top: 4rem;
   display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .membership__card {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;  /* Устанавливает одинаковую высоту карточек */
+  width: 100%;
 }
 
 .membership__card:hover {
