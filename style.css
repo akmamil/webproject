@@ -176,7 +176,7 @@ nav {
 
 .nav__links li {
   display: inline;
-  position: relative; /* Ensure the hover line is positioned relative to each link */
+  position: relative; 
 }
 
 .nav__links li a {
@@ -189,7 +189,6 @@ nav {
   color: var(--white);
 }
 
-/* Hover effect: Red line under link */
 .nav__links li a::after {
   content: "";
   position: absolute;
@@ -202,15 +201,15 @@ nav {
 }
 
 .nav__links li a:hover::after {
-  width: 100%; /* Line expands on hover */
+  width: 100%; 
 }
 
 .nav__links li a:hover {
-  color: white; /* Text remains white on hover */
+  color: white;
 }
 
 .nav__links li.active a {
-  color: red; /* Red color for the active link */
+  color: red; 
 }
 
 .nav__links li.active a::after {
@@ -435,7 +434,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;  /* Устанавливает одинаковую высоту карточек */
+  height: 100%; 
   width: 100%;
 }
 
@@ -536,7 +535,7 @@ nav {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--primary-color);
+  background-color: #0a0a0a;
 }
 
 .blog {
@@ -849,9 +848,9 @@ url("assets/banner-2.png");
 }
 
 .gallery__grid {
-  max-width: 275px;
+  max-width: 350px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -919,6 +918,7 @@ url("assets/banner-2.png");
   color: var(--text-light);
   text-align: center;
 }
+
 @media (width > 540px) {
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1001,8 +1001,6 @@ url("assets/banner-2.png");
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  
   
 }
 
@@ -1083,19 +1081,19 @@ url("assets/banner-2.png");
 }
 .about__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive grid layout */
-  gap: 2rem; /* Adjust space between cards */
-  justify-items: start; /* Aligns all grid items (cards) to the left */
-  margin-left: 0; /* Ensures the grid starts from the left edge */
-  margin-right: 0; /* Ensures no right margin */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2rem; 
+  justify-items: start; 
+  margin-left: 0;
+  margin-right: 0; 
 }
 
 .about__card {
-  padding: 1.5rem; /* Add padding inside the cards */
-  border: 1px solid #ddd; /* Optional: Adds border to the cards */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  background-color: #f9f9f9; /* Optional: Background color for the cards */
-  text-align: left; /* Ensures text is left-aligned inside each card */
+  padding: 1.5rem; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  background-color: #f9f9f9; 
+  text-align: left; 
 }
 
 .about__card h4 {
@@ -1112,13 +1110,13 @@ url("assets/banner-2.png");
 }
 
 h1, h2, h3, h4, h5, h6 {
-  overflow: hidden; /* Hides any overflow (no scrollbars) */
-  white-space: nowrap; /* Prevents text from wrapping onto the next line */
-  text-overflow: ellipsis; /* Optional: Adds "..." if the text overflows */
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
 }
 
 button{
-  overflow: hidden; /* Hides any overflow (no scrollbars) */
-  white-space: nowrap; /* Prevents text from wrapping onto the next line */
+  overflow: hidden; 
+  white-space: nowrap; 
   text-overflow: ellipsis;
 }
