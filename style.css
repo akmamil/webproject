@@ -98,6 +98,7 @@
 }
 
 .section__description {
+  text-align: center;
   color: var(--text-light);
 }
 
@@ -544,6 +545,9 @@ nav {
 
 .blog__container .section__header {
   color: var(--white);
+  margin-bottom: 0rem; /* Уменьшаем отступ снизу */
+  margin-top: 0; /* Убираем отступ сверху, если он есть */
+  line-height: 1.5; /* Уменьшаем высоту строки, если необходимо */
 }
 
 .blog__grid {
@@ -602,7 +606,7 @@ nav {
   align-items: center;
   width: 100%;
   height:400px;
-  background: white;
+  background: black solid;
   
   
  
@@ -616,7 +620,7 @@ nav {
   gap: 1 rem;
   width: 100%;
   
-  background: white;
+  background: #dc030a;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
@@ -631,7 +635,7 @@ url("assets/banner-2.png");
 }
 .bmi__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: #dc030a;
 }
 
  form {
@@ -718,7 +722,7 @@ textarea:hover{
   align-items: center;
   width: 100%;
   height:400px;
-  background: white;
+  background: black solid;
   
   
  
@@ -732,7 +736,7 @@ textarea:hover{
   gap: 1 rem;
   width: 100%;
   
-  background: white;
+  background: #dc030a;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
@@ -747,7 +751,7 @@ url("assets/banner-2.png");
 }
 .protein__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: #dc030a;
 }
 
 
@@ -767,7 +771,7 @@ url("assets/banner-2.png");
   align-items: center;
   width: 100%;
   height:400px;
-  background: white;
+  background: black solid;
   
   
  
@@ -781,7 +785,7 @@ url("assets/banner-2.png");
   gap: 1 rem;
   width: 100%;
   
-  background: white;
+  background: #dc030a;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
@@ -796,7 +800,7 @@ url("assets/banner-2.png");
 }
 .macro__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: #dc030a;
 }
 
 
@@ -1109,7 +1113,7 @@ url("assets/banner-2.png");
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   overflow: hidden; 
   white-space: nowrap; 
   text-overflow: ellipsis; 
@@ -1119,4 +1123,10 @@ button{
   overflow: hidden; 
   white-space: nowrap; 
   text-overflow: ellipsis;
+}
+
+.check_health span {
+  color: var(--primary-color);
+  font-size: 1rem;
+  align-items: center;
 }
