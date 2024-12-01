@@ -428,6 +428,13 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.membership__card,
+.membership__card * {
+  padding: 0; 
+  margin: 0; 
+}
+
+
 .membership__card {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -437,6 +444,7 @@ nav {
   justify-content: space-between;
   height: 100%; 
   width: 100%;
+  text-align: left;
 }
 
 .membership__card:hover {
@@ -449,6 +457,7 @@ nav {
   font-weight: 500;
   font-family: var(--header-font);
   color: var(--white);
+  text-align: left;
 }
 
 .membership__card ul {
@@ -456,12 +465,14 @@ nav {
   list-style: none;
   display: grid;
   gap: 1rem;
+  text-align: left;
 }
 
 .membership__card li {
   display: flex;
-  gap: 10px;
+  gap: 10px; /* Отступ между иконкой и текстом */
   color: var(--white);
+  text-align: left;
 }
 
 .membership__card li span {
@@ -470,6 +481,13 @@ nav {
   color: var(--primary-color);
   transition: 0.3s;
 }
+
+.membership__card li i {
+  font-size: 1.5rem; /* Размер иконки */
+  color: var(--primary-color); /* Цвет иконки */
+  flex-shrink: 0; /* Иконка не сжимается при переполнении */
+}
+
 
 .membership__card:hover li span {
   color: var(--white);
@@ -992,6 +1010,14 @@ url("assets/banner-2.png");
 
   .membership__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .membership__card {
+    padding: 1.5rem; /* Добавлены внутренние отступы для мобильной версии */
+  }
+
+  .membership__card ul {
+    gap: 1rem; /* Уменьшен gap для компактности */
   }
 
   .blog__grid {

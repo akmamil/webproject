@@ -15,12 +15,12 @@ if (closeIcon) {
 }
 /*навигация и плавный скроллинг*/
 function handleNavigationClick(event) {
-  // предотвратить поведение привязочного тега по умолчанию
+  // предотвратит поведение привязочного тега по умолчанию
   event.preventDefault();
-  // удалите класс "active" из всех навигационных ссылок
+  // удалит класс "active" из всех навигационных ссылок
   const links = document.querySelectorAll("nav ul li");
   links.forEach((link) => link.classList.remove("active"));
-  // добавьте класс "active" к родительскому элементу li ссылки, на который был сделан щелчок
+  // добавит класс "active" к родительскому элементу li ссылки, на который был сделан щелчок
   event.target.parentNode.classList.add("active");
   // плавная прокрутка к целевому разделу
   const targetId = event.target.getAttribute("href").substring(1);
@@ -95,7 +95,6 @@ document.getElementById("btn").addEventListener("click", function() {
     category = "Obesity";
   }
 
-  // Отображение результата
   document.getElementById("output").textContent = `Your BMI is ${bmi} (${category}).`;
   document.getElementById("height_error").textContent = "";
   document.getElementById("weight_error").textContent = "";
@@ -109,7 +108,6 @@ document.getElementById("protein-btn").addEventListener("click", function () {
   const weight = parseFloat(document.getElementById("protein-weight").value);
   const goal = document.getElementById("protein-goal").value;
 
-  // Проверка валидности веса
   if (isNaN(weight) || weight <= 0) {
     document.getElementById("protein-output").textContent = "Please enter a valid weight.";
     return;
@@ -120,32 +118,30 @@ document.getElementById("protein-btn").addEventListener("click", function () {
   // В зависимости от цели фитнеса рассчитываем потребление белка
   switch (goal) {
     case "maintenance":
-      proteinIntake = (weight * 1.3).toFixed(2); // 1.3 г/кг для поддержания
+      proteinIntake = (weight * 1.0).toFixed(2); // 1.0 г/кг для поддержания
       break;
     case "muscle-gain":
-      proteinIntake = (weight * 1.8).toFixed(2); // 1.8 г/кг для набора массы
+      proteinIntake = (weight * 1.2).toFixed(2); // 1.2 г/кг для набора массы
       break;
     case "fat-loss":
-      proteinIntake = (weight * 2.0).toFixed(2); // 2.0 г/кг для снижения жира
+      proteinIntake = (weight * 1.5).toFixed(2); // 1.5 г/кг для снижения жира
       break;
     default:
       proteinIntake = 0;
   }
 
-  // Вывод результата
   document.getElementById("protein-output").textContent = `Your recommended protein intake is ${proteinIntake} grams per day.`;
 });
 
 
 
+
 // Макронутриентный калькулятор
 document.getElementById("macro-btn").addEventListener("click", function () {
-  // Получаем значения из полей
   const weight = parseFloat(document.getElementById("macro-weight").value);
   const goal = document.getElementById("macro-goal").value;
   const calories = parseFloat(document.getElementById("macro-calories").value);
 
-  // Проверка валидности данных
   if (isNaN(weight) || weight <= 0 || isNaN(calories) || calories <= 0) {
     document.getElementById("macro-output").textContent = "Please enter valid weight and calorie values.";
     return;
@@ -183,7 +179,6 @@ document.getElementById("macro-btn").addEventListener("click", function () {
     carbs = 0;
   }
 
-  // Отображение результата
   document.getElementById("macro-output").textContent = `
     Your daily macronutrient breakdown is:
     - Protein: ${protein}g
