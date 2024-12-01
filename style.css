@@ -483,9 +483,9 @@ nav {
 }
 
 .membership__card li i {
-  font-size: 1.5rem; /* Размер иконки */
-  color: var(--primary-color); /* Цвет иконки */
-  flex-shrink: 0; /* Иконка не сжимается при переполнении */
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
 }
 
 
@@ -495,7 +495,7 @@ nav {
 
 
 .membership__card:hover li i {
-  color: var(--white); /* Цвет иконки (галочки) меняется на белый */
+  color: var(--white); 
 }
 
 .membership__card h3 {
@@ -512,11 +512,11 @@ nav {
 }
 
 .membership__card .btn {
-  transition: background-color 0.3s; /* Плавный переход для кнопки */
+  transition: background-color 0.3s; 
 }
 
 .membership__card .btn:hover {
-  background-color: var(--text-dark); /* Цвет кнопки только при наведении на неё */
+  background-color: var(--text-dark);
 }
 
 .swiper {
@@ -572,9 +572,9 @@ nav {
 
 .blog__container .section__header {
   color: var(--white);
-  margin-bottom: 0rem; /* Уменьшаем отступ снизу */
-  margin-top: 0; /* Убираем отступ сверху, если он есть */
-  line-height: 1.5; /* Уменьшаем высоту строки, если необходимо */
+  margin-bottom: 0rem; 
+  margin-top: 0; 
+  line-height: 1.5;
 }
 
 .blog__grid {
@@ -634,9 +634,6 @@ nav {
   width: 100%;
   height:400px;
   background: black solid;
-  
-  
- 
 }
 
 .bmi__container .wrapper{
@@ -1022,11 +1019,11 @@ url("assets/banner-2.png");
   }
   
   .membership__card {
-    padding: 1.5rem; /* Добавлены внутренние отступы для мобильной версии */
+    padding: 1.5rem; 
   }
 
   .membership__card ul {
-    gap: 1rem; /* Уменьшен gap для компактности */
+    gap: 1rem; 
   }
 
   .blog__grid {
